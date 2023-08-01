@@ -11,7 +11,39 @@ Essa aplicação foi desenvolvido durante o estudo utilizando **Java Spring e Sp
 
 <h2 id="pre-requisites">💻 Requisitos</h2> 
 
-Para rodar esse projeto você precisa ter o Java instalado na sua máquina.
+* Para rodar esse projeto você precisa ter o Java instalado na sua máquina.
+* Ter um acesso ao um banco no caso utilizamos o postgres
+
+```bash
+-- Script auxiliares DDL e DML para rodar a aplicação.
+-- Para a utilização no banco o UUID devemos instalar a extensão “uuid-ossp” através do comando abaixo:
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+-- Criando entidade
+
+CREATE TABLE item (
+    id uuid DEFAULT uuid_generate_v4 (),
+    title VARCHAR NOT NULL,
+    image VARCHAR NOT NULL,
+    price NUMERIC NOT NULL,
+    PRIMARY KEY (id)
+);
+
+-- Seleção da tabela "ITEM"
+
+select * from item;
+
+-- Inserindo valor para realizar consulta via postman
+
+insert into item (title,image,price)
+values('Mouse','https://m.media-amazon.com/images/I/61ni3t1ryQL._AC_SX522_.jpg',10.0);
+
+-- Deletando item na entidade por ID 
+
+delete from item where id = 'ab4e61dd-6482-4fc5-825c-575bce728e78';
+```
+
 
 <h2 id="how-to-use"> 🚀 Instalando o projeto</h2>
 
@@ -28,13 +60,12 @@ $ mkdir shop
 $ cd shop
 ```
 
-Agora, dentro do IntelliJ, vamos instalar as depedências com o Maven
+Agora, dentro do IntelliJ, vamos instalar as depedências com o Maven>Lifecycle>package
 
-<img width="300px" src="./.github/instalar-deps.png">
 
-E por fim, entre no arquivo da classe `CardapioApllication` para executar o projeto
+E por fim, entre no arquivo da classe `ShopApllication` para executar o projeto, clicando sobre a classe com botão direito do mouse e ir em > Run 'ShopApplication.main()' ou Ctrl+Shift+F10
 
-<img width="300px" src="./.github/executar.png">
+
 
 <h2 id="related">🫂 Integração com Frontend</h2>
 
@@ -52,7 +83,7 @@ Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` p
 
 Meu site: [Maik Costa](https://maikcosta.github.io/) &nbsp;&middot;&nbsp; 
 
-Instagram: [@maikcosta](https://github.com/maikcosta) &nbsp;&middot;&nbsp;
+Instagram: [@maikcosta](https://www.instagram.com/maikcosta/) &nbsp;&middot;&nbsp;
 
 YouTube [@maikcosta](https://www.youtube.com/@maikcosta) &nbsp;&middot;&nbsp;
 
