@@ -21,8 +21,11 @@ Primeiro você deve clonar o repositório,
 # Clone o repositório
 $ git clone https://github.com/maikcosta/shop
 
+# Crie o diretorio
+$ mkdir shop
+
 # Acesse-o
-$ cd crud-java-back
+$ cd shop
 ```
 
 Agora, dentro do IntelliJ, vamos instalar as depedências com o Maven
