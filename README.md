@@ -73,12 +73,6 @@ Para realizar a integração com o Frontend, você pode clonar o projeto e rodar
 
 👉 [Link do repositório](https://github.com/maikcosta/shop-frontend)
 
-
-<h2 id="related">📝 Licença</h2>
-
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` para obter mais informações.
-
-
 ## 📱 Minhas Redes
 
 Meu site: [Maik Costa](https://maikcosta.github.io/) &nbsp;&middot;&nbsp; 
